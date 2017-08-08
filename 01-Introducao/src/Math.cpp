@@ -24,7 +24,13 @@ int subtract(int a, int b)
 
 int multiply(int a, int b)
 {
-    return a * b;
+    if( a == 0 || b == 0){
+      return 0;
+    }
+
+    else{
+      return b + multiply( a-1, b );
+    }
 }
 
 int divide(int a, int b)

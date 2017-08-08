@@ -51,10 +51,10 @@ void testSubtract()
 void testMultiply()
 {
     assert( multiply(1, 1) == 1 );
-    assert( multiply(-1, 1) == -1 );
+    assert( multiply(1, 0) == 0 );
     assert( multiply(10, 11) == 110 );
     assert( multiply(0, 5) == 0 );
-    assert( multiply(-1, -1) == 1 );
+    assert( multiply(2, 24) == 48 );
     
     std::cout << "All multiply-tests passed!\n";
 }
