@@ -12,6 +12,7 @@ void testAdd();
 void testSubtract();
 void testMultiply();
 void testDivide();
+void testFactorial();
 
 int main(int argc, const char * argv[]) {
     
@@ -19,6 +20,7 @@ int main(int argc, const char * argv[]) {
     testSubtract();
     testMultiply();
     testDivide();
+    testFactorial();
     
     std::cout << "All tests passed!\n";
     return 0;
@@ -66,4 +68,15 @@ void testDivide()
     assert( divide(100, 10) == 10 );
     
     std::cout << "All divide-tests passed!\n";
+}
+
+void testFactorial()
+{
+    assert( factorial(0) == 1 );
+    assert( factorial(1) == 1 );
+    assert( factorial(3) == 6 );
+    assert( factorial(4) == 24 );
+    assert( factorial(5) == 120 );
+    
+    std::cout << "All factorial-tests passed!\n";
 }

@@ -15,4 +15,6 @@ int multiply(int, int);
 
 int divide(int, int);
 
+int factorial(int);
+
 #endif /* Math_hpp */

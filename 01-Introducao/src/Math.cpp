@@ -25,3 +25,21 @@ int divide(int a, int b)
 {
     return a / b;
 }
+
+int factorial(int a)
+{
+    if ( a == 0 )
+    {
+      return 1;
+    }
+    else
+    {
+      int fat = 1;
+      for ( int i = 1; i <= a; i++)
+      {
+        fat = fat * i;
+      }
+      return fat; 
+    }
+
+}
