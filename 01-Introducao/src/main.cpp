@@ -10,11 +10,15 @@
 
 void testAdd();
 void testSubtract();
+void testMultiply();
+void testDivide();
 
 int main(int argc, const char * argv[]) {
     
     testAdd();
     testSubtract();
+    testMultiply();
+    testDivide();
     
     std::cout << "All tests passed!\n";
     return 0;
@@ -40,4 +44,26 @@ void testSubtract()
     assert( subtract(1, -1) == 2 );
     
     std::cout << "All subtract-tests passed!\n";
+}
+
+void testMultiply()
+{
+    assert( multiply(1, 1) == 1 );
+    assert( multiply(-1, 1) == -1 );
+    assert( multiply(10, 11) == 110 );
+    assert( multiply(0, 5) == 0 );
+    assert( multiply(-1, -1) == 1 );
+    
+    std::cout << "All multiply-tests passed!\n";
+}
+
+void testDivide()
+{
+    assert( divide(1, 1) == 1 );
+    assert( divide(12, 2) == 6 );
+    assert( divide(-1, -1) == 1 );
+    assert( divide(10, 2) == 5 );
+    assert( divide(100, 10) == 10 );
+    
+    std::cout << "All divide-tests passed!\n";
 }
