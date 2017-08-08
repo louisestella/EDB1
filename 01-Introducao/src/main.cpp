@@ -29,10 +29,10 @@ int main(int argc, const char * argv[]) {
 void testAdd()
 {
     assert( add(1, 1) == 2 );
-    assert( add(-1, 1) == 0 );
+    assert( add(0, 1) == 1 );
     assert( add(1, 11) == 12 );
-    assert( add(0, 5) == 5 );
-    assert( add(-1, -1) == -2 );
+    assert( add(5, 0) == 5 );
+    assert( add(10, 15) == 25 );
     
     std::cout << "All add-tests passed!\n";
 }

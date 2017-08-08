@@ -8,7 +8,13 @@
 
 int add(int a, int b)
 {
-    return a + b;
+    if( a == 0 ){
+      return b;
+    }
+
+    else{
+      return add( a-1, b ) + 1;
+    }
 }
 
 int subtract(int a, int b)
