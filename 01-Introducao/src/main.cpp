@@ -22,40 +22,11 @@ int main(int argc, const char * argv[]) {
 
 void testAdd()
 {
-    float result = add(1, 1);
-    
-    if(result != 2)
-    {
-        std::cout << "1st test failed" << std::endl;
-    }
-    
-    result = add(-1, 1);
-    
-    if(result != 0)
-    {
-        std::cout << "2nd test failed" << std::endl;
-    }
-    
-    result = add(-1, -1);
-    
-    if(result != -2.0)
-    {
-        std::cout << "3rd test failed" << std::endl;
-    }
-    
-    result = add(0, 0);
-    
-    if(result != 0)
-    {
-        std::cout << "4th test failed" << std::endl;
-    }
-    
-    result = add(1, -1);
-    
-    if(result != 0)
-    {
-        std::cout << "5th test failed" << std::endl;
-    }
+    assert( add(1, 1) == 2 );
+    assert( add(-1, 1) == 0 );
+    assert( add(1, 11) == 12 );
+    assert( add(0, 5) == 5 );
+    assert( add(-1, -1) == -2 );
     
     std::cout << "All add-tests passed!\n";
 }
