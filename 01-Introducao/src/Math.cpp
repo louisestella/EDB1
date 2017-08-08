@@ -46,12 +46,7 @@ int factorial(int a)
     }
     else
     {
-      int fat = 1;
-      for ( int i = 1; i <= a; i++)
-      {
-        fat = fat * i;
-      }
-      return fat; 
+      return a * factorial( a - 1 ); 
     }
 
 }
