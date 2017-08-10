@@ -3,24 +3,37 @@
 
 using namespace std;
 
-void reverseString( string s );
+string reverseString( string str, string reversed, int size  );
 
 int main()
 {
-    string s = "flesym htiw od ot tahw wonk t'nod tsuj I";
+    string str = "flesym htiw od ot tahw wonk t'nod tsuj I";
+    string reversed = "";
 
-    cout << s << endl;
+    cout << "Type a text to see it reversed..." << endl << endl; 
+    cin >> str;
 
-    cout << reverseString( s ) << endl; 
+    int size = str.length();
+
+    cout << reverseString( str, reversed, size ) << endl; 
 
     return 0;
     
 }
 
 //recursive function to revert a string 
-void reverseString( string s )
+string reverseString( string str, string reversed, int size )
 {
 
-
+    if ( size <= 0 )
+    {
+        reversed = reversed + str[size];
+        return reversed;
+    }
+    else
+    {
+        reversed = reversed + str[size];
+        return reverseString( str, reversed, size-1 );
+    }
 
 }
