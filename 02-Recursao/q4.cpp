@@ -7,6 +7,7 @@ int tailFib(int n, int pen, int sum);
 int main(){
 
     int n;
+    cout << "Type a number to see which Fibonacci term it represents." << endl;
     cin >> n;
 
     cout << tailFib(n, 1, 1) << endl;
