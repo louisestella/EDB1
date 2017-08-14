@@ -26,10 +26,10 @@ Exercises to implement recursive and tail recursive functions using C++.
 
 ### Content of the questions
 
-1. Function that revert a string recursively;
+1. Function that reverts a string recursively;
 2. Converts a decimal number to a binary one;
 3. Tail recursive function that sums the digits of a number;
 4. Tail recursive function that returns the N-th Fibonacci term of the Fibonacci Sequence;
 5. Returns the min element of an array of integers;
 6. Returns the sum of all elements of an array of integers;
-7. Given and KEY, this function returns the index of an array that matches the KEY.
+7. Given a KEY, this function returns the index of an array that matches the KEY.
