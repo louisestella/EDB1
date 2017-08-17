@@ -3,6 +3,7 @@
 using namespace std;
 
 bool Sum_2( int *v, int size, int sum );
+bool Bin_Sum_2( int *v, int size, int sum );
 
 int main(){
     int x;
@@ -36,7 +37,7 @@ int main(){
 
     cin >> x;
 
-    Sum_2( numbers, size, x );    
+    Bin_Sum_2( numbers, size, x );    
 
     delete[] numbers;
     return 0;
@@ -48,11 +49,40 @@ bool Sum_2( int *v, int size, int sum ){
         for( int j = 0; j < i; j++ ){
             if( v[i] + v[j] == sum){
                 cout << "The two elements of your array are: " << endl;
-                cout << v[i] << " + " << v[j] << endl << "that are equal to " << sum << endl;
+                cout << v[i] << " + " << v[j] << endl;
                 return true;
             }
         }
      }
      cout << "There is NOT two elements that sum up to " << sum << "." << endl;
      return false;
+}
+
+
+// function that return 2 elements of an array which sum up to a given X with complexity theta( n*lg(n) )
+bool Bin_Sum_2( int *v, int size, int sum ){
+
+
+    for( int i = 0; i < size; i++ ){
+        int begin = 0;
+        int end = size-1;
+        int middle = (begin + end) / 2;      
+//        begin = 0;
+//        end = size-1;    
+
+        while( begin <= end){
+            middle = (begin + end) / 2;
+            if( (v[i] + v[middle]) < sum ){        
+                begin = middle + 1;
+            } else if( (v[i] + v[middle]) > sum ){        
+                end = middle - 1;
+            } else if( v[i] + v[middle] == sum ){
+                cout << "The two elements of your array are: " << endl;
+                cout << v[i] << " + " << v[middle] << endl;
+                return true;
+            }        
+        }
+    }
+    cout << "There is NOT two elements that sum up to " << sum << "." << endl;
+    return false;
 }
