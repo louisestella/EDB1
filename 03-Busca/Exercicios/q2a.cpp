@@ -28,7 +28,7 @@ int main(){
     return 0;
 }
 
-//function to return the index number of a given key (if there is one)
+//function to return the first index number of a given key (if there is one)
 int findIndex(int v[], int size, int key){
     int begin = 0;
     int end = size-1;
