@@ -58,7 +58,7 @@ int findLeftIndex( int v[], int size, int key ){
 
     while( begin <= end ){
         middle = (begin + end) / 2;
-        if( v[middle] == v[middle-1] || v[middle] > key ){
+        if( key == v[middle-1] || v[middle] > key ){
             end = middle - 1;
         } else if( v[middle] < key ){
             begin = middle + 1;
@@ -74,5 +74,21 @@ int findLeftIndex( int v[], int size, int key ){
 //function to return the last index number of a given key (if there is one)
 int findRightIndex( int v[], int size, int key ){
 
+    int begin = 0;
+    int end = size-1;
+    int middle = (begin + end) / 2;
+
+    while( begin <= end ){
+        middle = (begin + end) / 2;
+        if( v[middle] > key ){
+            end = middle - 1;
+        } else if( v[middle] == v[middle+1] || v[middle] < key ){
+            begin = middle + 1;
+        } else{
+            return middle;
+        }
+    }
+
     return -1; // NOT_FOUND
 }
+
