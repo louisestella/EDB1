@@ -36,7 +36,7 @@ int findIndex(int v[], int size, int key){
 
     while( begin <= end ){
         middle = (begin + end) / 2;
-        if( v[middle] == v[middle-1] || v[middle] > key ){
+        if( key == v[middle-1] || v[middle] > key ){
             end = middle - 1;
         } else if( v[middle] < key ){
             begin = middle + 1;
