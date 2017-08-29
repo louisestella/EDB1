@@ -14,3 +14,20 @@ void selection_sort(int v[], int size){
         }
     }
 }
+
+void rec_selection_sort( int v[], int first, int last ){
+
+    int min = first;
+
+    for( int i = first; i < last; i++ ){
+        if( v[i] < v[min] ){
+            min = i;
+        }
+    }
+    
+    swap( v[min], v[first] );
+
+    if( first != last){
+        rec_selection_sort( v, first+1, last );
+    }
+}
