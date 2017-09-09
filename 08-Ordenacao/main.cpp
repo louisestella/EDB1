@@ -1,7 +1,10 @@
 #include "selection_sort.hpp"
+#include "insertion_sort.hpp"
 #include <iostream>
 
 using namespace std;
+
+void swap( int& , int& );
 
 int main(){
 
@@ -22,7 +25,9 @@ int main(){
 
 //    selection_sort( v, size );
 
-    rec_selection_sort( v, 0, size-1 );
+//    rec_selection_sort( v, 0, size-1 );
+
+    insertion_sort( v, size-1 );
 
     cout << "After the selection sort: " << endl << "[";
 
