@@ -2,6 +2,8 @@
 #include "insertion_sort.hpp"
 #include "bubble_sort.hpp"
 #include "merge_sort.hpp"
+#include "book_merge_sort.hpp"
+//#include "quick_sort.hpp"
 #include <iostream>
 
 using namespace std;
@@ -33,7 +35,11 @@ int main(){
 
 //    bubble_sort( v, size-1 );
 
-    merge_sort( v, 0, size-1 );
+//    merge_sort( v, 0, size-1 );
+
+    book_merge_sort( v, 0, size-1 );
+
+//    quick_sort( v, 0, size-1 );
 
     cout << "After the selection sort: " << endl << "[";
 
