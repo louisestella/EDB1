@@ -1,6 +1,7 @@
 #include "selection_sort.hpp"
 #include "insertion_sort.hpp"
 #include "bubble_sort.hpp"
+#include "merge_sort.hpp"
 #include <iostream>
 
 using namespace std;
@@ -30,7 +31,9 @@ int main(){
 
 //    insertion_sort( v, size-1 );
 
-    bubble_sort( v, size-1 );
+//    bubble_sort( v, size-1 );
+
+    merge_sort( v, 0, size-1 );
 
     cout << "After the selection sort: " << endl << "[";
 
